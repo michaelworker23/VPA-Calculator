@@ -80,3 +80,4 @@ function bmi () {
     var result = alfa * totalvpa / x;
     document.getElementById("result").innerHTML = "Free concentration of valproic acid is  " + result;
     }
+
