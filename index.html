@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>valproic acid calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="calc.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="/calc.js"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="/logocopy.png" alt=""></a>
+            </div> 
+            <div class="lang-menu">
+                <div class="selected-lang">
+                    English
+                </div>
+                <ul>
+                    <li>
+                        <a href="/indexde.html" class="de">German</a>
+                    </li>
+                    <li>
+                        <a href="/index.html" class="en">English</a>
+                    </li>
+                    <li>
+                        <a href="/indexro.html" class="ro">Romanian</a>
+                    </li>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
     <h1 style=text-align:center;>Calculator for the free concentration of valproic acid</h1>
     <p style="background-color:#f5f5dc; margin-left: 10%; margin-right: 10%;">Valproate (VPA) is primarily used to treat epilepsy and bipolar disorder and prevent migraine headaches. They are useful for the prevention of seizures in those with absence seizures, partial seizures, and generalized seizures.
 
@@ -24,7 +49,7 @@
         <input id="totalvpa" type="text" placeholder="Total VPA in mg/L" />
         <br />
         <br />
-        <input class = "submit" type="button"  value="Submit" onclick="bmi()" />
+        <input class = "submit" type="button"  value="Submit" onclick="vpa()" />
         <br>
         <br>
         <p id="result">Result</p>
