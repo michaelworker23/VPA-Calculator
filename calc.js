@@ -1,4 +1,4 @@
-function bmi () {
+function vpa () {
     var totalvpa = Number(document.getElementById("totalvpa").value);
     var albumin = Number(document.getElementById("albumin").value);
     var alfa;
@@ -77,7 +77,7 @@ function bmi () {
         alfa = 35.8;
       }
     var x = 6.5;
-    var result = alfa * totalvpa / x;
-    document.getElementById("result").innerHTML = "Free concentration of valproic acid is  " + result;
+    var result = alfa * totalvpa / x; 
+    document.getElementById("result").innerHTML = "Free concentration of valproic acid is " + result.toFixed(2) + " mg/dL";
     }
 
