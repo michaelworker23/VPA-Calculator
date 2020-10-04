@@ -83,7 +83,7 @@ function vpa () {
         alfa = 6.5
       }
       else if (albumin >= 46.000 && albumin <= 55.999)  {
-        alfa = 6.3
+        alfa = 6.4
       }
     var x = 6.5;
     var result = alfa * totalvpa / x; 
