@@ -87,5 +87,5 @@ function vpa () {
       }
     var x = 6.5;
     var result = alfa * totalvpa / x; 
-    document.getElementById("result").innerHTML = "Free concentration of valproic acid is " + result.toFixed(2) + " mg/dL";
+    document.getElementById("result").innerHTML = "Real concentration of valproic acid after correction is " + result.toFixed(2) + " mg/dL";
     }
