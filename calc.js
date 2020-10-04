@@ -76,6 +76,15 @@ function vpa () {
       else if (albumin >= 18.000 && albumin <= 18.999) {
         alfa = 35.8;
       }
+      else if (albumin >= 17.000 && albumin <= 17.999) {
+        alfa = 37.9;
+      }
+      else if (albumin >= 16.000 && albumin <= 16.999) {
+        alfa = 40.1;
+      }
+      else if (albumin >= 15.000 && albumin <= 15.999) {
+        alfa = 43.4;
+      }
       else if (albumin >= 42.000 && albumin <= 43.999) {
         alfa = 6.5  
       }
