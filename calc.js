@@ -82,7 +82,7 @@ function vpa () {
       else if (albumin >= 44.000 && albumin <= 45.999) {
         alfa = 6.5
       }
-      else if (albumin >= 46.000 && albumin <=55.999)  {
+      else if (albumin >= 46.000 && albumin <= 55.999)  {
         alfa = 6.3
       }
     var x = 6.5;
