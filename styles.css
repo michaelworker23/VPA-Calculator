@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,7 +19,7 @@ header {
 }
 
 nav {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -38,6 +39,7 @@ nav {
     text-align: right;
     font-weight: bold;
     margin-top: 20px;
+    margin-right: 20px;
     position: relative;
 }
 .lang-menu .selected-lang {
@@ -51,7 +53,6 @@ nav {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/us/flat/32.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -122,15 +123,23 @@ body,html {
     margin:0;
     padding:0;
 }
+h1 {
+    font-family: Lora, serif;
+} 
 p {
+    font-family: Lora, serif;
     font-size: large;
+    line-height: 1.5;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    padding: 2% 2%;
+    border-radius: 15px;
 }
 form {
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
     box-sizing: border-box;
-    box-shadow: 2px 2px 20px 5px black;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
     margin: 0;
     padding: 10px;
     width:100%;
@@ -177,3 +186,5 @@ h4 {
     text-shadow: -2px -2px 5px white;
     
 }
+
+
