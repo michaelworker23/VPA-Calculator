@@ -187,4 +187,50 @@ h4 {
     
 }
 
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.highlighted {
+    background-color: #f5f5dc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 5%;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .highlighted {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode input.submit {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+body.dark-mode a {
+    color: #90caf9;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
 
