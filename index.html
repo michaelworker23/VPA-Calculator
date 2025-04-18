@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179584561-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-179584561-1');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>valproic acid calculator</title>
+    <title>Valproic Acid (VPA) Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="calc.js"></script>
+    <script defer src="calc.js"></script>
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="logocopy.png" alt=""></a>
+                <a href="index.html"><img src="logocopy.png" alt="Logo"></a>
             </div> 
             <div class="lang-menu">
-                <a href="#selected-lang">
-                    English
-                </a>
-                <div id="lang-menu"></div>
+                <a href="#selected-lang">English</a>
                 <ul>
-                    <li>
-                        <a href="indexde.html" class="de">German</a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="en">English</a>
-                    </li>
-                    <li>
-                        <a href="indexro.html" class="ro">Romanian</a>
-                    </li>
-                    </li>
+                    <li><a href="indexde.html" class="de">German</a></li>
+                    <li><a href="index.html" class="en">English</a></li>
+                    <li><a href="indexro.html" class="ro">Romanian</a></li>
                 </ul>
-                
             </div>
         </nav>
     </header>
-    <h1 style=text-align:center;>Calculator for correction of valproic acid levels</h1>
-    
-    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">In blood, most drugs are bound to serum proteins. The fraction bound to proteins is considered to be pharmacologically inactive, as <strong>only the unbound (free) fraction is available for diffusion out of the vascular system to sites for pharmacological action.</strong><br> 
 
-        The valproic acid-protein binding depends on both the serum albumin concentration and the drug concentration. As a result, the free fraction of this drug is subject to more variation than other highly protein-bound antiepileptic drugs.
-        In patients with hypoalbuminemia, the total serum concentration of valproic acid may offer poor clinical information; however, very few clinical laboratories routinely analyze the free concentration of the drug. Use this calculator to analyse the correct concentration of valproic acid.</p>
-    <form>
-        <h4>VPA Calculator</h4>
-        <input id="albumin" type="text" placeholder="Albumin value in g/L" />
-        <br />
-        <br />
-        <input id="totalvpa" type="text" placeholder="Total VPA in mg/L" />
-        <br />
-        <br />
-        <input class = "submit" type="button"  value="Submit" onclick="vpa()" />
-        <br>
-        <br>
-        <p id="result">Result</p>
-    </form>
-    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">Valproate (VPA) is primarily used to treat epilepsy and bipolar disorder and prevent migraine headaches. They are useful for the prevention of seizures in those with absence seizures, partial seizures, and generalized seizures.
+    <main>
+        <h1 style="text-align:center;">Valproic Acid Correction Calculator</h1>
 
-        <strong>Excessive amounts of valproic acid can result in:<br> sleepiness<br>tremor<br>stupor<br>respiratory depression<br>coma<br>metabolic acidosis<br> death</strong><br> In general, serum or plasma valproic acid concentrations are in a range of 20–100 mg/l during controlled therapy, but may reach 150–1500 mg/l following acute poisoning.</p>
-    <br>
-    <br>
-    <br>
-    <p>This is my first programming project. The values and the informations are taken from <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf">this scientific paper.</a><br>
-    <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+        <section class="intro" style="background-color:#f5f5dc; margin: 2rem;">
+            <p>
+                In blood, most drugs are bound to serum proteins. The unbound (free) fraction is pharmacologically active. Valproic acid binding depends on albumin and total drug concentration. 
+                Use this calculator to estimate the pharmacologically active (free) VPA in patients, especially in hypoalbuminemia.
+            </p>
+        </section>
+
+        <form id="vpa-form" style="text-align: center;">
+            <h4>VPA Calculator</h4>
+
+            <label for="albumin">Albumin (g/L):</label><br>
+            <input id="albumin" name="albumin" type="number" step="any" required><br><br>
+
+            <label for="totalvpa">Total VPA (mg/L):</label><br>
+            <input id="totalvpa" name="totalvpa" type="number" step="any" required><br><br>
+
+            <button type="submit" class="submit">Calculate</button><br><br>
+
+            <p id="result">Result will appear here.</p>
+        </form>
+
+        <section class="info" style="background-color:#f5f5dc; margin: 2rem;">
+            <p>
+                Valproate (VPA) is used to treat epilepsy, bipolar disorder, and migraines. Therapeutic levels are usually 20–100 mg/L, but may rise significantly in overdose. Monitoring free VPA is especially important in hypoalbuminemia.
+            </p>
+        </section>
+
+        <p style="text-align:center;">
+            This is my first programming project. Based on
+            <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf" target="_blank">this scientific paper</a>.
+            <br>
+            <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a>
+        </p>
+    </main>
+
+    <footer style="text-align:center; padding: 1rem;">
+        &copy; 2020 VPA Calculator
+    </footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179584561-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-179584561-1');
+    </script>
 </body>
-<footer>&copy; Copyright 2020 / VPA Calculator</footer>
 </html>
