@@ -1,78 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179584561-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-179584561-1');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valproic Acid (VPA) Calculator</title>
+    <title>valproic acid calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="calc.js"></script>
-    <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="calc.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="logocopy.png" alt="Logo"></a>
+                <a href="index.html"><img src="logocopy.png" alt=""></a>
             </div> 
             <div class="lang-menu">
-                <a href="#selected-lang">English</a>
+                <a href="#selected-lang">
+                    German
+                </a>
+                <div id="lang-menu"></div>
                 <ul>
-                    <li><a href="indexde.html" class="de">German</a></li>
-                    <li><a href="index.html" class="en">English</a></li>
-                    <li><a href="indexro.html" class="ro">Romanian</a></li>
+                    <li>
+                        <a href="indexde.html" class="de">German</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="en">English</a>
+                    </li>
+                    <li>
+                        <a href="indexro.html" class="ro">Romanian</a>
+                    </li>
+                    </li>
                 </ul>
+                
             </div>
         </nav>
     </header>
-
-    <main>
-        <h1 style="text-align:center;">Valproic Acid Correction Calculator</h1>
-
-        <section class="intro" style="background-color:#f5f5dc; margin: 2rem;">
-            <p>
-                In blood, most drugs are bound to serum proteins. The unbound (free) fraction is pharmacologically active. Valproic acid binding depends on albumin and total drug concentration. 
-                Use this calculator to estimate the pharmacologically active (free) VPA in patients, especially in hypoalbuminemia.
-            </p>
-        </section>
-
-        <form id="vpa-form" style="text-align: center;">
-            <h4>VPA Calculator</h4>
-
-            <label for="albumin">Albumin (g/L):</label><br>
-            <input id="albumin" name="albumin" type="number" step="any" required><br><br>
-
-            <label for="totalvpa">Total VPA (mg/L):</label><br>
-            <input id="totalvpa" name="totalvpa" type="number" step="any" required><br><br>
-
-            <button type="submit" class="submit">Calculate</button><br><br>
-
-            <p id="result">Result will appear here.</p>
-        </form>
-
-        <section class="info" style="background-color:#f5f5dc; margin: 2rem;">
-            <p>
-                Valproate (VPA) is used to treat epilepsy, bipolar disorder, and migraines. Therapeutic levels are usually 20–100 mg/L, but may rise significantly in overdose. Monitoring free VPA is especially important in hypoalbuminemia.
-            </p>
-        </section>
-
-        <p style="text-align:center;">
-            This is my first programming project. Based on
-            <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf" target="_blank">this scientific paper</a>.
-            <br>
-            <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a>
-        </p>
-    </main>
-
-    <footer style="text-align:center; padding: 1rem;">
-        &copy; 2020 VPA Calculator
-    </footer>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179584561-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-179584561-1');
-    </script>
+    <h1 style=text-align:center;>Calculator for correction of valproic acid levels</h1>
+ 
+    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">Im Blut sind die meisten Medikamente an Serumproteine ​​gebunden. Die an Proteine ​​gebundene Fraktion wird als pharmakologisch inaktiv angesehen, da <strong>nur die ungebundene (freie) Fraktion für die pharmakologische Wirkung verfügbar ist.</strong>
+        Aufgrund dessen hängt die Arzneimittel-Protein-Bindung sowohl von der Serumalbumin-Konzentration als auch von der Arzneimittelkonzentration ab. Infolgedessen unterliegt die freie Fraktion dieses Arzneimittels mehr Variationen als andere stark proteingebundene Antiepileptika.
+        Bei Patienten mit Hypoalbuminämie kann die Gesamtserumkonzentration von Valproinsäure schlechte klinische Informationen liefern. Nur sehr wenige klinische Laboratorien analysieren routinemäßig die freie Konzentration des Arzneimittels. Verwenden Sie diesen Rechner, um den korrekten Teil von Valproinsäure herauszufinden!</p>
+    <form>
+        <h4>VPA Calculator</h4>
+        <input id="albumin" type="text" placeholder="Albumin value in g/L" />
+        <br />
+        <br />
+        <input id="totalvpa" type="text" placeholder="Total VPA in mg/L" />
+        <br />
+        <br />
+        <input class = "submit" type="button"  value="Submit" onclick="vpa()" />
+        <br>
+        <br>
+        <p id="result">Result</p>
+    </form>
+    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">Valproat (VPA) wird hauptsächlich zur Behandlung von Epilepsie (Absencen, Aufwach-Grand-Mal und juveniler myoklonischer Epilepsie) und bipolaren Störungen sowie zur Migräneprophylaxe eingesetzt.<strong>Eine Überdosierung an Valproinsäure kann zu:<br>Schläfrigkeit<br>Tremor<br>Stupor<br>Atemdepression<br>Koma<br>metabolischer Azidose<br>Tod führen.<br></strong>Die gesamte Valproinsäurekonzentration liegt während der kontrollierten Therapie im Bereich von 20–100 mg/l, kann jedoch nach einer akuten Vergiftung 150–1500 mg/l erreichen.</p>
+    <br>
+    <br>
+    <br>
+    <p>This is my first programming project. The values and the informations are taken from <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf">this scientific paper.</a><br>
+    <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 </body>
+<footer>&copy; Copyright 2020 / VPA Calculator</footer>
 </html>
