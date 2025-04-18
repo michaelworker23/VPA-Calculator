@@ -1,80 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179584561-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-179584561-1');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valproic Acid Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="calc.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title data-i18n="title">Valproic Acid Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="calc.js"></script>
+    <script defer src="translations.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="logocopy.png" alt=""></a>
-            </div> 
+                <a href="#"><img src="logocopy.png" alt="Logo" /></a>
+            </div>
             <div class="lang-menu">
-                <a href="#selected-lang">
-                    German
-                </a>
-                <div id="lang-menu"></div>
-                <ul>
-                    <li><a href="indexde.html" class="de">German</a></li>
-                    <li><a href="index.html" class="en">English</a></li>
-                    <li><a href="indexro.html" class="ro">Romanian</a></li>
-                </ul>
+                <select id="languageSwitcher">
+                    <option value="en">English</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ro">Română</option>
+                </select>
             </div>
         </nav>
     </header>
 
-    <h1 style="text-align:center;">Calculator for correction of valproic acid levels</h1>
+    <main>
+        <h1 data-i18n="main_heading">Calculator for correction of valproic acid levels</h1>
 
-    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">
-        In blood, most medications are bound to serum proteins. The protein-bound fraction is considered pharmacologically inactive because <strong>only the unbound (free) fraction is available for pharmacological action.</strong><br>
-        Protein binding of the drug depends on both the serum albumin concentration and the drug concentration. As a result, the free fraction of this drug is subject to more variation than other highly protein-bound antiepileptic medications.<br>
-        In patients with hypoalbuminemia, the total serum concentration of valproic acid may provide poor clinical information. Very few clinical laboratories routinely analyze the free concentration of the drug. Use this calculator to determine the correct free concentration of valproic acid!
-    </p>
+        <p data-i18n="intro_text" class="highlighted"></p>
 
-    <form>
-        <h4>VPA Calculator</h4>
-        <input id="albumin" type="text" placeholder="Albumin value in g/L" />
-        <br /><br />
-        <input id="totalvpa" type="text" placeholder="Total VPA in mg/L" />
-        <br /><br />
-        <input class="submit" type="button" value="Submit" onclick="vpa()" />
-        <br /><br />
-        <p id="result">Result</p>
-    </form>
+        <form>
+            <h4 data-i18n="form_heading">VPA Calculator</h4>
+            <input id="albumin" type="text" placeholder="Albumin value in g/L" />
+            <br /><br />
+            <input id="totalvpa" type="text" placeholder="Total VPA in mg/L" />
+            <br /><br />
+            <input class="submit" type="button" value="Submit" onclick="vpa()" />
+            <br /><br />
+            <p id="result">Result</p>
+        </form>
 
-    <p style="background-color:#f5f5dc; margin-left: 5%; margin-right: 5%;">
-        Valproate (VPA) is mainly used to treat epilepsy (absence seizures, generalized tonic-clonic seizures, and juvenile myoclonic epilepsy), bipolar disorder, and for migraine prophylaxis.<br>
-        <strong>Overdose of valproic acid can lead to:<br>
-        drowsiness<br>
-        tremor<br>
-        stupor<br>
-        respiratory depression<br>
-        coma<br>
-        metabolic acidosis<br>
-        death.</strong><br>
-        Total serum valproic acid concentrations during controlled therapy typically range from 20–100 mg/L, but may reach 150–1500 mg/L in cases of acute poisoning.
-    </p>
+        <p data-i18n="info_text" class="highlighted"></p>
 
-    <br><br><br>
+        <p>
+            <span data-i18n="footer_note"></span>
+            <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf" target="_blank">this scientific paper</a>.<br>
+            <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a>
+        </p>
+    </main>
 
-    <p>
-        This is my first programming project. The values and information are taken from <a href="https://pdfs.semanticscholar.org/8103/ac1f916f1d8ced51dba2fd365c4e125f2079.pdf">this scientific paper.</a><br>
-        <a href="https://twitter.com/WorkerMichael" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow me on Twitter</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </p>
+    <footer>
+        &copy; 2020 <span data-i18n="footer_text">VPA Calculator</span>
+    </footer>
 </body>
-<footer>&copy; Copyright 2020 / VPA Calculator</footer>
 </html>
