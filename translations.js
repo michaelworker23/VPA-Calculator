@@ -49,3 +49,18 @@ function setLanguage(lang) {
     }
   });
 }
+// DARK MODE TOGGLE
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggleDarkMode");
+  const isDark = localStorage.getItem("dark-mode") === "true";
+
+  if (isDark) document.body.classList.add("dark-mode");
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
+    });
+  }
+});
+
